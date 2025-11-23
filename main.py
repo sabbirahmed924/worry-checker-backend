@@ -30,3 +30,6 @@ def check_seriousness(symptom: str):
 @app.get("/check")
 def check(symptom: str):
     return check_seriousness(symptom)
+@app.get("/ping")
+def ping():
+    return {"status": "ok", "message": "Backend is running"}
